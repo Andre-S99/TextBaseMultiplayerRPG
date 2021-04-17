@@ -29,7 +29,7 @@ void Renderer::Clear()
     throw std::exception(__FUNCTION__" not implemented");
 }
 
-void Renderer::Draw(std::vector<wchar_t> buffer)
+void Renderer::Draw(const std::vector<wchar_t>& buffer)
 {
     throw std::exception(__FUNCTION__" not implemented");
 }

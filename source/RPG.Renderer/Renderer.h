@@ -8,7 +8,7 @@ class Renderer : public IRenderer
 public:
 	virtual void InitScreenBuffer(uint16_t width, uint16_t height) override;
 	virtual void Clear() override;
-	virtual void Draw(std::vector<wchar_t> buffer) override;
+	virtual void Draw(const std::vector<wchar_t>& buffer) override;
 	virtual void NewFrame() override;
 
 private:
