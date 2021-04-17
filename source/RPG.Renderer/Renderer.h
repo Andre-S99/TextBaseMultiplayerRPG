@@ -32,4 +32,6 @@ private:
 	friend IRenderer* GetRenderer();
 
 	FRIEND_TEST(Renderer, InitScreenBuffer_Should_Be_Ok);
+	FRIEND_TEST(Renderer, InitScreenBuffer_Should_Throw_Exception_When_It_Fails_To_Create_Console_Buffer);
+	FRIEND_TEST(Renderer, InitScreenBuffer_Should_Throw_Exception_When_It_Fails_To_Set_Console_Buffer);
 };
