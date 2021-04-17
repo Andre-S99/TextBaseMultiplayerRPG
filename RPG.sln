@@ -7,6 +7,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RPG", "source\RPG\RPG.vcxpr
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RPG.Renderer", "source\RPG.Renderer\RPG.Renderer.vcxproj", "{D039C9EC-C08E-4668-90F7-A7D4B83ACBF6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{39ABFC18-9D17-4179-917B-78797D16EB30}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RPG.Renderer.Tests", "tests\RPG.Renderer.Tests\RPG.Renderer.Tests.vcxproj", "{AE5BBE82-0D2A-4CD7-B3A4-03BC851858BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,9 +35,20 @@ Global
 		{D039C9EC-C08E-4668-90F7-A7D4B83ACBF6}.Release|x64.Build.0 = Release|x64
 		{D039C9EC-C08E-4668-90F7-A7D4B83ACBF6}.Release|x86.ActiveCfg = Release|Win32
 		{D039C9EC-C08E-4668-90F7-A7D4B83ACBF6}.Release|x86.Build.0 = Release|Win32
+		{AE5BBE82-0D2A-4CD7-B3A4-03BC851858BE}.Debug|x64.ActiveCfg = Debug|x64
+		{AE5BBE82-0D2A-4CD7-B3A4-03BC851858BE}.Debug|x64.Build.0 = Debug|x64
+		{AE5BBE82-0D2A-4CD7-B3A4-03BC851858BE}.Debug|x86.ActiveCfg = Debug|Win32
+		{AE5BBE82-0D2A-4CD7-B3A4-03BC851858BE}.Debug|x86.Build.0 = Debug|Win32
+		{AE5BBE82-0D2A-4CD7-B3A4-03BC851858BE}.Release|x64.ActiveCfg = Release|x64
+		{AE5BBE82-0D2A-4CD7-B3A4-03BC851858BE}.Release|x64.Build.0 = Release|x64
+		{AE5BBE82-0D2A-4CD7-B3A4-03BC851858BE}.Release|x86.ActiveCfg = Release|Win32
+		{AE5BBE82-0D2A-4CD7-B3A4-03BC851858BE}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AE5BBE82-0D2A-4CD7-B3A4-03BC851858BE} = {39ABFC18-9D17-4179-917B-78797D16EB30}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FEBCC7D5-FA5A-49E1-9DB4-4488E8D2E375}

@@ -9,3 +9,8 @@
 /source/RPG/x64
 /source/RPG.Renderer/Debug
 /source/RPG.Renderer/Release
+/packages
+/source/RPG.Renderer/x64/Debug
+/tests/RPG.Renderer.Tests/Debug
+/tests/RPG.Renderer.Tests/x64/Debug
+/x64/Debug

@@ -26,4 +26,6 @@ private:
 	HANDLE screenBufferHandle = nullptr;
 
 	friend IRenderer* GetRenderer();
+
+	FRIEND_TEST(Renderer, InitScreenBuffer_Should_Be_Ok);
 };
