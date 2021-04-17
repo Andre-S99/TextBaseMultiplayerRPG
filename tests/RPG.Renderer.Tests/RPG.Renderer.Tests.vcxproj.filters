@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="RendererTests.cpp">
+      <Filter>features</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="features">
+      <UniqueIdentifier>{650b100f-0186-4b44-addc-b8108d27167b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils">
+      <UniqueIdentifier>{d5ba683c-376f-4e38-9885-474bc9c9b62d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

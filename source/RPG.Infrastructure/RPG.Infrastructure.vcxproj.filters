@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Arquivos de Recurso">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="features">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="utils">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="adapters">
+      <UniqueIdentifier>{cfb19487-ffc1-4b8d-84bc-1ce88963600e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="adapters\WindowsAdapter">
+      <UniqueIdentifier>{879afb70-7f4a-42be-b60b-f1f8dbc7411b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="IWindowsAdapter.h">
+      <Filter>adapters\WindowsAdapter</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsAdapter.h">
+      <Filter>adapters\WindowsAdapter</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="RPG.Infrastructure.cpp">
+      <Filter>features</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>features</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsAdapter.cpp">
+      <Filter>adapters\WindowsAdapter</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
