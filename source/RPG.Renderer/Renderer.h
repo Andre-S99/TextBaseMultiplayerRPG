@@ -1,6 +1,7 @@
 #pragma once
 
 #include "IRenderer.h"
+#include "..\RPG.Infrastructure\IWindowsAdapter.h"
 
 class Renderer : public IRenderer
 {
@@ -11,12 +12,6 @@ public:
 	virtual void NewFrame() override;
 
 private:
-	Renderer() = default;
-	Renderer(const Renderer&) = delete;
-	Renderer(Renderer&&) = delete;
-	Renderer& operator=(const Renderer&) = delete;
-	Renderer& operator=(Renderer&&) = delete;
-
 	std::vector<wchar_t> screenBuffer;
 
 	uint16_t screenWidth = 0;
@@ -24,6 +19,15 @@ private:
 	uint32_t totalScreenSize = 0;
 
 	HANDLE screenBufferHandle = nullptr;
+
+	std::shared_ptr<IWindowsAdapter> windowsAdapter;
+
+private:
+	Renderer(std::shared_ptr<IWindowsAdapter> windowsAdapter);
+	Renderer(const Renderer&) = delete;
+	Renderer(Renderer&&) = delete;
+	Renderer& operator=(const Renderer&) = delete;
+	Renderer& operator=(Renderer&&) = delete;
 
 	friend IRenderer* GetRenderer();
 

@@ -5,7 +5,7 @@ int main()
 {
     auto renderer = GetRenderer();
 
-    renderer->NewFrame();
+    renderer->InitScreenBuffer(20, 20);
 
     return 0;
 }

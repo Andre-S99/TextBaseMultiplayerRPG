@@ -1,6 +1,11 @@
 #include "pch.h"
 #include "Renderer.h"
 
+Renderer::Renderer(std::shared_ptr<IWindowsAdapter> windowsAdapter)
+    : windowsAdapter(windowsAdapter)
+{
+}
+
 void Renderer::InitScreenBuffer(uint16_t width, uint16_t height)
 {
     screenWidth = width;
@@ -10,12 +15,12 @@ void Renderer::InitScreenBuffer(uint16_t width, uint16_t height)
 
     screenBuffer = std::vector<wchar_t>(totalScreenSize, ' ');
 
-    auto hNewScreenBuffer = CreateConsoleScreenBuffer(GENERIC_READ | GENERIC_WRITE, FILE_SHARE_READ | FILE_SHARE_WRITE, nullptr, CONSOLE_TEXTMODE_BUFFER, nullptr);
+    auto hNewScreenBuffer = windowsAdapter->CreateConsoleScreenBuffer(GENERIC_READ | GENERIC_WRITE, FILE_SHARE_READ | FILE_SHARE_WRITE, nullptr, CONSOLE_TEXTMODE_BUFFER, nullptr);
 
     if (hNewScreenBuffer == INVALID_HANDLE_VALUE)
         throw std::exception("Failed to init screen buffer");
 
-    if (!SetConsoleActiveScreenBuffer(hNewScreenBuffer))
+    if (!windowsAdapter->SetConsoleActiveScreenBuffer(hNewScreenBuffer))
         throw std::exception("Failed to set active screen buffer");
 }
 
