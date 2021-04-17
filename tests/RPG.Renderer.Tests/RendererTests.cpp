@@ -102,3 +102,25 @@ TEST(Renderer, InitScreenBuffer_Should_Throw_Exception_When_It_Fails_To_Set_Cons
 
     VerifyNoOtherInvocations(windowsAdapterMock);
 }
+
+TEST(Renderer, Clear_Should_Clear_RenderBuffer)
+{
+    Mock<IWindowsAdapter> windowsAdapterMock;
+    auto windowsAdapter = make_shared_mock(windowsAdapterMock);
+
+    Renderer renderer(windowsAdapter);
+
+    renderer.screenBuffer = { 1, 1, 1, 1 };
+
+    wchar_t clearCharacter = L'?';
+
+    std::vector<wchar_t> expectedBuffer = { clearCharacter , clearCharacter , clearCharacter , clearCharacter };
+
+    renderer.Clear(clearCharacter);
+
+    bool buffersAreEquals = std::equal(renderer.screenBuffer.begin(), renderer.screenBuffer.end(), expectedBuffer.begin());
+
+    ASSERT_TRUE(buffersAreEquals);
+
+    VerifyNoOtherInvocations(windowsAdapterMock);
+}

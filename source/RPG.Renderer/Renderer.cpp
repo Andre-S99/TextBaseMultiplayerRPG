@@ -24,9 +24,9 @@ void Renderer::InitScreenBuffer(uint16_t width, uint16_t height)
         throw std::exception("Failed to set active screen buffer");
 }
 
-void Renderer::Clear()
+void Renderer::Clear(wchar_t character)
 {
-    throw std::exception(__FUNCTION__" not implemented");
+    std::fill(screenBuffer.begin(), screenBuffer.end(), character);
 }
 
 void Renderer::Draw(const std::vector<wchar_t>& buffer)
