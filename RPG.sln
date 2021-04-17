@@ -7,11 +7,19 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RPG", "source\RPG\RPG.vcxpr
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RPG.Renderer", "source\RPG.Renderer\RPG.Renderer.vcxproj", "{D039C9EC-C08E-4668-90F7-A7D4B83ACBF6}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{39ABFC18-9D17-4179-917B-78797D16EB30}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Tests", "5 - Tests", "{39ABFC18-9D17-4179-917B-78797D16EB30}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RPG.Renderer.Tests", "tests\RPG.Renderer.Tests\RPG.Renderer.Tests.vcxproj", "{AE5BBE82-0D2A-4CD7-B3A4-03BC851858BE}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RPG.Infrastructure", "source\RPG.Infrastructure\RPG.Infrastructure.vcxproj", "{67C2C1BD-93F7-4E6A-A40A-5E3E0761E27D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - RPG", "1 - RPG", "{875A665E-8CD9-4607-98C9-84A3A2055A80}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Graphics", "2 - Graphics", "{00BE5CAB-D672-4397-B0F8-A652612BF07C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Networking", "3 - Networking", "{7C6AFDA1-8248-4915-8DC5-392BC99CF289}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infrastructure", "4 - Infrastructure", "{3773D00D-B184-4937-BBDD-5A32B8480D00}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -58,7 +66,10 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{C1C9AC28-2EFA-4AA5-9587-ACCAD9A9D18C} = {875A665E-8CD9-4607-98C9-84A3A2055A80}
+		{D039C9EC-C08E-4668-90F7-A7D4B83ACBF6} = {00BE5CAB-D672-4397-B0F8-A652612BF07C}
 		{AE5BBE82-0D2A-4CD7-B3A4-03BC851858BE} = {39ABFC18-9D17-4179-917B-78797D16EB30}
+		{67C2C1BD-93F7-4E6A-A40A-5E3E0761E27D} = {3773D00D-B184-4937-BBDD-5A32B8480D00}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FEBCC7D5-FA5A-49E1-9DB4-4488E8D2E375}
