@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31019.35
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RPG", "source\RPG\RPG.vcxproj", "{C1C9AC28-2EFA-4AA5-9587-ACCAD9A9D18C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RPG.Renderer", "source\RPG.Renderer\RPG.Renderer.vcxproj", "{D039C9EC-C08E-4668-90F7-A7D4B83ACBF6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{C1C9AC28-2EFA-4AA5-9587-ACCAD9A9D18C}.Release|x64.Build.0 = Release|x64
 		{C1C9AC28-2EFA-4AA5-9587-ACCAD9A9D18C}.Release|x86.ActiveCfg = Release|Win32
 		{C1C9AC28-2EFA-4AA5-9587-ACCAD9A9D18C}.Release|x86.Build.0 = Release|Win32
+		{D039C9EC-C08E-4668-90F7-A7D4B83ACBF6}.Debug|x64.ActiveCfg = Debug|x64
+		{D039C9EC-C08E-4668-90F7-A7D4B83ACBF6}.Debug|x64.Build.0 = Debug|x64
+		{D039C9EC-C08E-4668-90F7-A7D4B83ACBF6}.Debug|x86.ActiveCfg = Debug|Win32
+		{D039C9EC-C08E-4668-90F7-A7D4B83ACBF6}.Debug|x86.Build.0 = Debug|Win32
+		{D039C9EC-C08E-4668-90F7-A7D4B83ACBF6}.Release|x64.ActiveCfg = Release|x64
+		{D039C9EC-C08E-4668-90F7-A7D4B83ACBF6}.Release|x64.Build.0 = Release|x64
+		{D039C9EC-C08E-4668-90F7-A7D4B83ACBF6}.Release|x86.ActiveCfg = Release|Win32
+		{D039C9EC-C08E-4668-90F7-A7D4B83ACBF6}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
