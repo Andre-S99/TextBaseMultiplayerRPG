@@ -34,7 +34,9 @@ void Renderer::Draw(const std::vector<wchar_t>& buffer)
     throw std::exception(__FUNCTION__" not implemented");
 }
 
-void Renderer::NewFrame()
+bool Renderer::NewFrame()
 {
-    throw std::exception(__FUNCTION__" not implemented");
+    DWORD bytesWritten;
+
+    return windowsAdapter->WriteConsoleOutputCharacterW(screenBufferHandle, screenBuffer.data(), screenBuffer.size(), { 0,0 }, &bytesWritten);
 }

@@ -124,3 +124,23 @@ TEST(Renderer, Clear_Should_Clear_RenderBuffer)
 
     VerifyNoOtherInvocations(windowsAdapterMock);
 }
+
+TEST(Renderer, NewFrame_Should_Output_A_New_Frame_To_Console)
+{
+    Mock<IWindowsAdapter> windowsAdapterMock;
+    auto windowsAdapter = make_shared_mock(windowsAdapterMock);
+
+    Renderer renderer(windowsAdapter);
+
+    When(Method(windowsAdapterMock, WriteConsoleOutputCharacterW).Using(renderer.screenBufferHandle, renderer.screenBuffer.data(), renderer.screenBuffer.size(), Any<COORD>(), Any<LPDWORD>()))
+        .Return(true);
+
+    bool ret = renderer.NewFrame();
+
+    ASSERT_TRUE(ret);
+
+    Verify(Method(windowsAdapterMock, WriteConsoleOutputCharacterW).Using(renderer.screenBufferHandle, renderer.screenBuffer.data(), renderer.screenBuffer.size(), Any<COORD>(), Any<LPDWORD>()))
+        .Once();
+
+    VerifyNoOtherInvocations(windowsAdapterMock);
+}
